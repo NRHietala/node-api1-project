@@ -29,7 +29,7 @@ server.post('/api/users', (req, res) => {
   .catch(err => res.status(400).json(err.message))
 });
 
-server.put('/api/user/:id', async (req, res) => {
+server.put('/api/users/:id', async (req, res) => {
   const id = req.params.id;
   const changes = req.body;
 
@@ -45,9 +45,9 @@ server.put('/api/user/:id', async (req, res) => {
   }
 })
 
-server.delete('/api/user/:id', (req, res) => {
+server.delete('/api/users/:id', (req, res) => {
   const id = req.params.id;
-  dbFunc.remove()
+  dbFunc.remove(id)
   .then(user => res.status(200).json(user))
   .catch(err => res.status(500).json(err.message))
 });
