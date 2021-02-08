@@ -53,10 +53,3 @@ server.delete('/api/users/:id', (req, res) => {
 });
 
 module.exports = server;
-
-// const users = [
-//   {id:generate(), name:"Bob", job: "Clown"},
-//   {id:generate(), name:"Tom", job: "Mattress Salesman"},
-//   {id:generate(), name:"Steve", job: "Racer"},
-//   {id:generate(), name:"Jake", job: "Alcoholic"},
-// ];
