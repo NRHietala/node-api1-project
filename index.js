@@ -1,5 +1,9 @@
 const server = require('./api/server');
+const PORT = 5555;
+const express = require('express');
+const app = express();
+app.use(express.json());
 
-const port = 5000;
-
-// START YOUR SERVER HERE
+app.listen(PORT, () => {
+  console.log(`Server listening on ${PORT}`);
+});
